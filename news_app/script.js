@@ -1,5 +1,5 @@
 
-const apiKey = "d9d35e06a67b49899e2f209b0a75ef6a"; // 🔑 Get it from https://newsapi.org/
+const apiKey = "d9d35e06a67b49899e2f209b0a75ef6a"; //  Get API Key from https://newsapi.org/
 let currentPage = 1;
 const pageSize = 10;
 let currentQuery = "technology";
@@ -14,14 +14,14 @@ const pageNumber = document.getElementById("pageNumber");
 async function fetchNews() {
   const url = `https://newsapi.org/v2/everything?q=${currentQuery}&pageSize=${pageSize}&page=${currentPage}&apiKey=${apiKey}`;
 
-  newsContainer.innerHTML = `<p style="text-align:center;">Loading...</p>`;
+  newsContainer.innerText = "Loading.... ";
 
   try {
     const response = await fetch(url);
     const data = await response.json();
 
     if (data.articles.length === 0) {
-      newsContainer.innerHTML = `<p style="text-align:center;">No results found</p>`;
+      newsContainer.innerText = "No results found";
       return;
     }
 
