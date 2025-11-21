@@ -9,3 +9,53 @@ html, body {
   height: 100%;
   width: 100%;
 }
+
+body {
+  font-family: Arial, sans-serif;
+  background: #eef2ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 350px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #c7c7c7;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: #6366f1;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #4f46e5;
+}
+
+.option {
+  padding: 10px;
+  background: #e0e7ff;
+  margin: 10px 0;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.option:hover {
+  background: #c7d2fe;
+}
