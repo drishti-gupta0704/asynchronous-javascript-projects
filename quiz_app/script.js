@@ -22,4 +22,20 @@ async function startQuiz() {
 }
 
 function showQuestion() {
+   const current = questions[index];
+
+  questionText.innerHTML = current.question;
+
+  let allOptions = [...current.incorrect_answers, current.correct_answer];
+  allOptions.sort(() => Math.random() - 0.5);
+
+  optionsBox.innerHTML = "";
+
+  allOptions.forEach(opt => {
+    const btn = document.createElement("button");
+    btn.className = "option";
+    btn.innerHTML = opt;
+    optionsBox.appendChild(btn);
+  });
 }
+
